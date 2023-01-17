@@ -34,6 +34,9 @@ CFLAGS   = -I.              -O3 -std=c11   -fPIC
 CXXFLAGS = -I. -I./examples -O3 -std=c++11 -fPIC
 LDFLAGS  =
 
+CFLAGS += -D_POSIX_C_SOURCE=199309L
+CXXFLAGS += -D_POSIX_C_SOURCE=199309L
+
 # OS specific
 # TODO: support Windows
 ifeq ($(UNAME_S),Linux)
